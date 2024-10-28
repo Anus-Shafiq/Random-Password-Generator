@@ -1,0 +1,16 @@
+.border {
+  height: 40px;
+  width: 60%;
+}
+
+.accordion {
+  --bs-accordion-active-bg: none;
+  --bs-accordion-btn-focus-box-shadow: none;
+  --bs-accordion-border-radius: 50px;
+  --bs-accordion-inner-border-radius: 50px;
+  --bs-accordion-active-color: blue;
+}
+
+.accordion-button:hover {
+  color: blue;
+}
