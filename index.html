@@ -129,7 +129,7 @@
         <div class="container">
           <div class="row d-flex justify-content-center">
             <div class="col-sm-12 col-md-12 col-lg-4">
-              <div class="image">
+              <div class="image text-center">
                 <img
                   class="img-fluid"
                   src="./assets/heroimage.svg"
@@ -151,20 +151,60 @@
                   Generate
                 </button>
               </div>
-              <div class="d-flex gap-4 mt-4">
-                <p>Password Lenght:</p>
-                <input type="range" class="form-range w-25" max="50" min="0" />
+              <div class="d-flex gap-4 mt-4 justify-content-between w-75">
+                <div class="w-100">
+                  <p>
+                    Password Lenght: <span class="fw-bold" id="rangeNum"></span>
+                  </p>
+                </div>
+                <div class="w-100">
+                  <input
+                    onchange="num()"
+                    id="range"
+                    type="range"
+                    class="form-range"
+                    max="30"
+                    min="6"
+                  />
+                </div>
               </div>
               <div class="d-flex gap-4 mt-4">
                 <p>Character used:</p>
-                <label for="ABC" class="form-check-label">ABC</label>
-                <input id="ABC" type="checkbox" class="form-check-input" />
-                <label for="abc" class="form-check-label">abc</label>
-                <input id="abc" type="checkbox" class="form-check-input" />
-                <label for="123" class="form-check-label">123</label>
-                <input id="123" type="checkbox" class="form-check-input" />
-                <label for="#$&" class="form-check-label">#$&</label>
-                <input id="#$&" type="checkbox" class="form-check-input" />
+                <label for="uppercase" class="form-check-label fw-bold"
+                  >ABC</label
+                >
+                <input
+                  onchange="num()"
+                  id="uppercase"
+                  type="checkbox"
+                  class="form-check-input"
+                  checked
+                />
+                <label for="lowercase" class="form-check-label fw-bold"
+                  >abc</label
+                >
+                <input
+                  onchange="num()"
+                  id="lowercase"
+                  type="checkbox"
+                  class="form-check-input"
+                  checked
+                />
+                <label for="num" class="form-check-label fw-bold">123</label>
+                <input
+                  onchange="num()"
+                  id="num"
+                  type="checkbox"
+                  class="form-check-input"
+                  checked
+                />
+                <label for="symbol" class="form-check-label fw-bold">#$&</label>
+                <input
+                  onchange="num()"
+                  id="symbol"
+                  type="checkbox"
+                  class="form-check-input"
+                />
               </div>
             </div>
           </div>
@@ -498,7 +538,7 @@
                     sends, receives, nor stores any passwords. The auto password
                     generator is a valuable tool to use when you want to access
                     the power of your computer and its perfect cryptographic
-                    power. 
+                    power.
                     <br /><br />
                     Everyone wants to have a strong random password for their
                     important accounts. Unfortunately, no matter how clever you
